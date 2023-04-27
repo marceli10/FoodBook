@@ -1,0 +1,18 @@
+spring:
+  profiles:
+    active: dev
+  neo4j:
+    uri: bolt://localhost:7687
+    authentication:
+      username: neo4j
+      password: example123
+logging:
+  level:
+    sql: debug
+
+oauth2:
+  provider:
+    google:
+      client-id: ${secrets.google.client-id}
+      client-secret: ${secrets.google.client-secret}
+      scopes: profile, email
