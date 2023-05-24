@@ -16,3 +16,11 @@ oauth2:
       client-id: ${secrets.google.client-id}
       client-secret: ${secrets.google.client-secret}
       scopes: profile, email
+
+app:
+  cors:
+    allowed-origins: ${secrets.cors.allowed-origins}
+
+rsa:
+  private-key: classpath:certs/private.pem
+  public-key: classpath:certs/public.pem

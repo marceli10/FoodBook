@@ -1,5 +1,6 @@
 package com.example.foodbook.model;
 
+import com.example.foodbook.model.relation.Contains;
 import org.springframework.data.neo4j.core.schema.*;
 
 import java.util.Set;
@@ -17,8 +18,8 @@ public class Meal {
     @Property("name")
     private String name;
 
-    @Relationship(type = "CONTAIN", direction = INCOMING)
-    private Set<Contain> ingredients;
+    @Relationship(type = "CONTAINS", direction = INCOMING)
+    private Set<Contains> ingredients;
 
     public Meal(String name) {
         this.name = name;
@@ -36,7 +37,7 @@ public class Meal {
         this.name = name;
     }
 
-    public Set<Contain> getIngredients() {
+    public Set<Contains> getIngredients() {
         return ingredients;
     }
 }

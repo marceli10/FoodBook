@@ -3,12 +3,16 @@ package com.example.foodbook.controller;
 import com.example.foodbook.controller.dto.request.IngredientDto;
 import com.example.foodbook.model.Ingredient;
 import com.example.foodbook.service.IngredientService;
+import jakarta.annotation.security.RolesAllowed;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+import static com.example.foodbook.model.security.SecurityRoles.ADMIN;
+import static com.example.foodbook.model.security.SecurityRoles.USER;
+
 @RestController
-@RequestMapping("/api/ingredient")
+@RequestMapping("/api/ingredients")
 public class IngredientController {
 
     private final IngredientService ingredientService;
@@ -18,11 +22,13 @@ public class IngredientController {
     }
 
     @GetMapping("/all")
+    @RolesAllowed({USER, ADMIN})
     public List<Ingredient> getAllIngredients() {
         return ingredientService.getAllIngredients();
     }
 
     @PostMapping
+    @RolesAllowed(ADMIN)
     public Ingredient createIngredient(@RequestBody IngredientDto ingredientDto) {
         return ingredientService.createIngredient(ingredientDto);
     }
