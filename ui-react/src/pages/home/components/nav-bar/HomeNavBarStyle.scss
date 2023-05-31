@@ -1,0 +1,52 @@
+.home-page-nav-bar {
+  width: 100vw;
+  height: 15vh;
+  background: #171717;
+  display: flex;
+  font-size: 2rem;
+
+  ul {
+    display: flex;
+    width: 100%;
+
+    li {
+      margin-left: 30px;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      border: 1px solid red;
+
+      .nav-bar-link {
+        text-decoration: none;
+        color: #fff;
+      }
+
+      &:hover {
+        background: #2f2c2c;
+        cursor: pointer;
+      }
+
+      &:first-child:hover {
+        cursor: default;
+        background: #171717;
+      }
+
+      .nav-bar-logo {
+        width: 100px;
+        height: 100px;
+      }
+
+      &:last-child {
+        align-self: flex-end;
+        margin-left: auto;
+        height: 100%;
+        img {
+          width: 100px;
+          height: 100px;
+        }
+      }
+    }
+  }
+
+
+}

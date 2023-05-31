@@ -35,18 +35,17 @@
 
     .form-login-button {
       margin-bottom: 10px;
-      background: rgb(204,204,255);
-      background: linear-gradient(45deg, rgba(204,204,255,1) 0%, rgba(215,82,131,1) 100%);
+      background: rgb(204, 204, 255);
+      background: linear-gradient(45deg, rgba(204, 204, 255, 1) 0%, rgba(215, 82, 131, 1) 100%);
       transition: all 1s ease-in;
       border: 1px solid #a53d97;
 
       &:hover {
-        background: rgb(204,204,255);
-        background: linear-gradient(45deg, rgba(204,204,255,1) 0%, rgba(215,82,131,1) 0%);
+        background: rgb(204, 204, 255);
+        background: linear-gradient(45deg, rgba(204, 204, 255, 1) 0%, rgba(215, 82, 131, 1) 0%);
         cursor: pointer;
       }
     }
-
 
 
     .form-signup-link {

@@ -1,5 +1,5 @@
 import React from 'react';
-import GoogleLogo from '../../../../../assets/icons8-google-50.svg';
+import GoogleLogo from '../../../../../assets/google-logo.svg';
 import {useNavigate} from 'react-router-dom';
 import './GoogleLoginStyle.scss';
 import {useGoogleLogin} from '@react-oauth/google';
@@ -20,8 +20,8 @@ const GoogleLogin: React.FunctionComponent = () => {
             const code = response.code;
             await axios
                 .post('http://localhost:8080/api/security/oauth/google', {code})
-                .then(resp => localStorage.setItem('token', resp.data))
-                .then(navigate('/'));
+                .then(resp => localStorage.setItem('token', resp.data));
+            navigate('/find-recipes');
         },
         flow: 'auth-code'
     });

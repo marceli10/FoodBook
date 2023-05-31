@@ -1,0 +1,15 @@
+<svg id="SvgjsSvg1070" width="288" height="288" xmlns="http://www.w3.org/2000/svg" version="1.1"
+     xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs">
+    <defs id="SvgjsDefs1071"></defs>
+    <g id="SvgjsG1072">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="288" height="288">
+            <rect width="256" height="256" fill="none"></rect>
+            <polyline fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"
+                      points="174.011 86 216 128 174.011 170"></polyline>
+            <line x1="104" x2="215.971" y1="128" y2="128" fill="none" stroke="#fff" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-width="8" class="colorStroke000 svgStroke"></line>
+            <path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"
+                  d="M104,216H48a8,8,0,0,1-8-8V48a8,8,0,0,1,8-8h56" class="colorStroke000 svgStroke"></path>
+        </svg>
+    </g>
+</svg>
