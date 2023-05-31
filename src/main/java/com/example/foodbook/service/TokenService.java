@@ -25,7 +25,7 @@ public class TokenService {
                 .issuer("FoodBook")
                 .issuedAt(now)
                 .expiresAt(now.plus(1, ChronoUnit.HOURS))
-                .subject(user.getEmail())
+                .subject(user.getUserId().toString())
                 .claim("role", user.getRole())
                 .build();
 

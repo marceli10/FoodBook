@@ -14,4 +14,7 @@ public interface UserRepository extends Neo4jRepository<User, UUID> {
 
     @Query("OPTIONAL MATCH (u: User {email: $email, provider: $provider}) RETURN u")
     Optional<User> findUserByEmailAndProvider(String email, Provider provider);
+
+    @Query("OPTIONAL MATCH (u: User {userId: $userId}) RETURN u")
+    Optional<User> findUserById(String userId);
 }

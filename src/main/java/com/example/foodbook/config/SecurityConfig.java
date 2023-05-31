@@ -40,6 +40,8 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
                 .csrf(AbstractHttpConfigurer::disable)
+                .cors()
+                .and()
                 .authorizeHttpRequests(req -> req
                         .requestMatchers("/api/security/**")
                         .permitAll()

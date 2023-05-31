@@ -1,12 +1,14 @@
 package com.example.foodbook.model;
 
-import com.example.foodbook.model.relation.Contains;
-import org.springframework.data.neo4j.core.schema.*;
+import org.springframework.data.neo4j.core.schema.GeneratedValue;
+import org.springframework.data.neo4j.core.schema.Id;
+import org.springframework.data.neo4j.core.schema.Node;
+import org.springframework.data.neo4j.core.schema.Relationship;
 
 import java.util.Set;
 import java.util.UUID;
 
-import static org.springframework.data.neo4j.core.schema.Relationship.Direction.INCOMING;
+import static org.springframework.data.neo4j.core.schema.Relationship.Direction.OUTGOING;
 
 @Node("Meal")
 public class Meal {
@@ -15,14 +17,28 @@ public class Meal {
     @GeneratedValue(GeneratedValue.UUIDGenerator.class)
     private UUID mealId;
 
-    @Property("name")
     private String name;
+    private String creator;
 
-    @Relationship(type = "CONTAINS", direction = INCOMING)
-    private Set<Contains> ingredients;
+    @Relationship(type = "CONTAINS", direction = OUTGOING)
+    private Set<Ingredient> ingredients;
 
-    public Meal(String name) {
+    public Meal(String name, String creator, Set<Ingredient> ingredients) {
         this.name = name;
+        this.creator = creator;
+        this.ingredients = ingredients;
+    }
+
+    public void setIngredients(Set<Ingredient> ingredients) {
+        this.ingredients = ingredients;
+    }
+
+    public String getCreator() {
+        return creator;
+    }
+
+    public void setCreator(String creator) {
+        this.creator = creator;
     }
 
     public UUID getMealId() {
@@ -37,7 +53,7 @@ public class Meal {
         this.name = name;
     }
 
-    public Set<Contains> getIngredients() {
+    public Set<Ingredient> getIngredients() {
         return ingredients;
     }
 }
