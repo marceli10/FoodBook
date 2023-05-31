@@ -1,0 +1,24 @@
+.social-login-container {
+  color: #fff;
+  min-height: 120px;
+
+  hr {
+    overflow: visible; /* For IE */
+    padding: 0;
+    border: none;
+    border-top: medium double #333;
+    color: #333;
+    text-align: center;
+
+    &:after {
+      content: "Social login";
+      display: inline-block;
+      position: relative;
+      top: -1.2em;
+      font-size: 1em;
+      padding: 0 0.25em;
+      background: #101010;
+      border: medium double #333
+    }
+  }
+}

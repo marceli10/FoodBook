@@ -1,0 +1,19 @@
+.login-page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1e1b1b;
+
+  .login-container {
+    background-color: #171717;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+
+    -webkit-box-shadow: 8px 8px 24px 0 rgb(45, 46, 56);
+    -moz-box-shadow: 8px 8px 24px 0 rgb(43, 44, 51);
+    box-shadow: 8px 8px 24px 0 rgb(41, 42, 49);
+  }
+}
