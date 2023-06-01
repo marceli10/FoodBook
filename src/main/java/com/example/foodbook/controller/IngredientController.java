@@ -7,6 +7,7 @@ import jakarta.annotation.security.RolesAllowed;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.UUID;
 
 import static com.example.foodbook.model.security.SecurityRoles.ADMIN;
 import static com.example.foodbook.model.security.SecurityRoles.USER;
@@ -31,5 +32,11 @@ public class IngredientController {
     @RolesAllowed(ADMIN)
     public Ingredient createIngredient(@RequestBody IngredientDto ingredientDto) {
         return ingredientService.createIngredient(ingredientDto);
+    }
+
+    @PostMapping
+    @RolesAllowed(ADMIN)
+    public void deleteIngredient(@RequestBody UUID ingredientId) {
+        ingredientService.deleteIngredient(ingredientId);
     }
 }
